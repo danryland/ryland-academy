@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center">
     <h1 class="sr-only">Ryland Academy</h1>
-    <div class="flex col items-center stretch justify-center">
+    <div class="flex col-12 col-6-md items-center stretch justify-center">
       <div class="card card-main">
         <h2>Prime factors</h2>
         <p>
@@ -21,7 +21,7 @@
         </p>
       </div>
     </div>
-    <div class="col stretch">
+    <div class="col col-12 col-6-md stretch">
       <div class="row stretch height-50">
         <div class="column stretch">
           <div class="card card-one height-50">
