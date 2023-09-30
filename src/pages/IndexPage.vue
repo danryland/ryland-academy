@@ -44,7 +44,7 @@
           <q-img
             style="width: 250px; height: auto"
             fit="contain"
-            src="src/assets/img/prime-factors.svg"
+            src="../assets/img/prime-factors.svg"
             alt=""
           />
         </div>
