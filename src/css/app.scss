@@ -1,1 +1,118 @@
 // app global css in SCSS form
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+$blue: #0fbcf9;
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: $blue;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  margin: 0px 0px 24px 0px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0px 0px 24px 0px;
+}
+
+p {
+  color: #032733;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0px 0px 24px 0px;
+}
+
+.card {
+  padding: 40px;
+}
+
+.stretch {
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.card-main {
+  max-width: 497px;
+}
+
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  * {
+    margin: 0px;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+}
+
+.height-50 {
+  height: 50%;
+}
+
+.card-one {
+  background-color: rgba($blue, 0.02);
+  p {
+    font-family: 'Poppins';
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1em;
+  }
+}
+.card-two {
+  background-color: rgba($blue, 0.08);
+  p {
+    font-family: 'Poppins';
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1em;
+  }
+}
+.card-three {
+  background-color: rgba($blue, 0.14);
+  p {
+    font-family: 'Poppins';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1em;
+  }
+}
+.card-four {
+  background-color: rgba($blue, 0.2);
+}
