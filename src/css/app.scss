@@ -50,14 +50,12 @@ p {
 }
 
 .card {
+  min-height: 250px;
   padding: 40px;
 }
 
 .stretch {
-  @media (min-width: 600px) {
-    flex: 1 0 0;
-    align-self: stretch;
-  }
+  align-self: stretch;
 }
 
 .card-main {
@@ -72,6 +70,7 @@ p {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  gap: 24px;
   * {
     margin: 0px;
   }
@@ -85,7 +84,7 @@ p {
 }
 
 .height-50 {
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     height: 50%;
   }
 }

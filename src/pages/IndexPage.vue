@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center">
     <h1 class="sr-only">Ryland Academy</h1>
-    <div class="flex col-12 col-6-md items-center stretch justify-center">
+    <div class="flex col-12 col-lg-6 items-center stretch justify-center">
       <div class="card card-main">
         <h2>Prime factors</h2>
         <p>
@@ -21,9 +21,9 @@
         </p>
       </div>
     </div>
-    <div class="col col-12 col-6-md stretch">
+    <div class="col col-12 col-lg-6 stretch">
       <div class="row stretch height-50">
-        <div class="column stretch">
+        <div class="col col-12 col-sm-6 stretch">
           <div class="card card-one height-50">
             <h3>Prime numbers</h3>
             <p>2 3 5 7 11 13...</p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="row stretch height-50">
-        <div class="card card-four stretch">
+        <div class="card card-four full-width stretch">
           <h3>Prime factorisation (Factor tree)</h3>
           <q-img
             style="width: 250px; height: auto"
