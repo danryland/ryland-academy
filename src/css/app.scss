@@ -108,6 +108,17 @@ p {
     line-height: 36px;
     margin-bottom: 32px;
   }
+  .progress {
+    width: 125px;
+    margin: 0px auto 32px auto;
+    border-radius: 16px;
+    .q-linear-progress__track {
+      opacity: 1;
+    }
+    .q-linear-progress__track--dark {
+      background-color: rgba(white, 0.08);
+    }
+  }
 }
 
 .footer-learn,
