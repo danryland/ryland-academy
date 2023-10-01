@@ -103,27 +103,42 @@ export default {
       {
         text: 'Select the prime number',
         options: ['3', '4', '20'],
-        answer: 0,
+        answer: 1,
       },
       {
         text: 'Select the composite number',
         options: ['2', '4', '5'],
-        answer: 1,
+        answer: 2,
       },
       {
         text: 'What are the prime factors of 42',
         options: ['3 × 14', '2 × 3 × 7', '2 × 21'],
-        answer: 1,
+        answer: 2,
       },
       {
         text: 'What are the prime factors of 150?',
-        options: ['13', '3', '39'],
-        answer: 0,
+        options: ['2 × 3 × 5 × 5', '3 × 3 × 5 × 5', '6 × 25'],
+        answer: 1,
       },
       {
         text: 'What is the LCM of 13 and 3?',
-        options: ['2 × 3 × 5 × 5', '3 × 3 × 5 × 5', '6 × 25'],
-        answer: 0,
+        options: ['13', '3', '39'],
+        answer: 3,
+      },
+      {
+        text: 'What is the HCF of 32 and 24?',
+        options: ['2', '8', '4'],
+        answer: 2,
+      },
+      {
+        text: 'What is the LCM of 24 and 36?',
+        options: ['12', '72', '30'],
+        answer: 2,
+      },
+      {
+        text: 'What is the HCF of 104 and 136?',
+        options: ['8', '12', '13'],
+        answer: 1,
       },
     ];
     let activeQuestionIndex = ref(0);
@@ -135,9 +150,10 @@ export default {
 
     const checkAnswer = () => {
       showAnswer.value = true;
+      const currentAnswer = answers.value[activeQuestionIndex.value];
       if (
-        questions[activeQuestionIndex.value].answer ===
-        answers.value[activeQuestionIndex.value]
+        currentAnswer !== null &&
+        questions[activeQuestionIndex.value].answer === currentAnswer + 1
       ) {
         console.log('%cCorrect', 'color: green');
         isAnswerCorrect.value = true;
