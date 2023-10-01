@@ -13,6 +13,7 @@
 }
 
 $blue: #0fbcf9;
+$active: #ffd32a;
 
 body {
   font-family: 'Manrope', sans-serif;
@@ -22,26 +23,24 @@ h1,
 h2,
 h3 {
   font-family: 'Poppins', sans-serif;
-  color: $blue;
   font-style: normal;
+  font-weight: 900;
+  margin: 0px 0px 24px 0px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 48px;
 }
 
 h2 {
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 48px;
-  margin: 0px 0px 24px 0px;
-}
-
-h3 {
   font-size: 32px;
   font-weight: 700;
   line-height: 32px;
-  margin: 0px 0px 24px 0px;
 }
 
 p {
-  color: #032733;
+  font-family: 'Manrope', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -49,73 +48,156 @@ p {
   margin: 0px 0px 24px 0px;
 }
 
-.card {
-  min-height: 250px;
-  padding: 40px;
-}
+.page-learn,
+.page-quiz {
+  padding: 32px;
 
-.stretch {
-  align-self: stretch;
-}
-
-.card-main {
-  max-width: 497px;
-}
-
-.card-one,
-.card-two,
-.card-three,
-.card-four {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  gap: 24px;
-  * {
-    margin: 0px;
+  .q-list {
+    margin-bottom: 32px;
   }
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 0;
-    align-self: stretch;
-  }
-}
 
-.height-50 {
-  @media (min-width: 768px) {
-    height: 50%;
-  }
-}
-
-.card-one {
-  background-color: rgba($blue, 0.04);
-  p {
-    font-family: 'Poppins';
-    font-size: 50px;
+  .q-item {
+    background-color: rgba(white, 0.04);
+    font-family: Manrope;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1em;
+    line-height: normal;
+    margin-bottom: 16px;
+    border-radius: 32px;
+    padding: 16px 24px;
+    overflow: hidden;
+    &.active-item {
+      background-color: rgba($active, 0.08);
+      $size: 72px;
+      &.answer-correct {
+        &:after {
+          font-family: 'Font Awesome 6 Pro';
+          content: '\f00c';
+          background: $positive;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          bottom: 0px;
+          width: $size;
+          line-height: $size;
+          text-align: center;
+        }
+      }
+      &.answer-wrong {
+        &:after {
+          font-family: 'Font Awesome 6 Pro';
+          content: '\f00d';
+          background: $negative;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          bottom: 0px;
+          width: $size;
+          line-height: $size;
+          text-align: center;
+        }
+      }
+    }
   }
 }
-.card-two {
-  background-color: rgba($blue, 0.08);
-  p {
-    font-family: 'Poppins';
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 1em;
+
+.page-quiz {
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 32px;
   }
 }
-.card-three {
-  background-color: rgba($blue, 0.14);
-  p {
-    font-family: 'Poppins';
-    font-size: 70px;
-    font-weight: 700;
-    line-height: 1em;
+
+.footer-learn,
+.footer-quiz {
+  background: linear-gradient(180deg, rgba(32, 25, 64, 0) 0%, #201940 100%);
+  padding: 40px 32px;
+}
+
+.q-btn {
+  &.btn-large {
+    padding: 16px 32px;
+    border-radius: 40px;
+    .block {
+      color: #fff;
+      font-size: 24px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+    }
   }
 }
-.card-four {
-  background-color: rgba($blue, 0.2);
-}
+
+// .card {
+//   min-height: 250px;
+//   padding: 40px;
+// }
+
+// .stretch {
+//   align-self: stretch;
+// }
+
+// .card-main {
+//   max-width: 497px;
+// }
+
+// .card-one,
+// .card-two,
+// .card-three,
+// .card-four {
+//   display: flex;
+//   align-items: center;
+//   text-align: center;
+//   flex-direction: column;
+//   gap: 24px;
+//   * {
+//     margin: 0px;
+//   }
+//   p {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex: 1 0 0;
+//     align-self: stretch;
+//   }
+// }
+
+// .height-50 {
+//   @media (min-width: 768px) {
+//     height: 50%;
+//   }
+// }
+
+// .card-one {
+//   background-color: rgba($blue, 0.04);
+//   p {
+//     font-family: 'Poppins';
+//     font-size: 50px;
+//     font-weight: 700;
+//     line-height: 1em;
+//   }
+// }
+// .card-two {
+//   background-color: rgba($blue, 0.08);
+//   p {
+//     font-family: 'Poppins';
+//     font-size: 100px;
+//     font-weight: 700;
+//     line-height: 1em;
+//   }
+// }
+// .card-three {
+//   background-color: rgba($blue, 0.14);
+//   p {
+//     font-family: 'Poppins';
+//     font-size: 70px;
+//     font-weight: 700;
+//     line-height: 1em;
+//   }
+// }
+// .card-four {
+//   background-color: rgba($blue, 0.2);
+// }
