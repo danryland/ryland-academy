@@ -17,6 +17,32 @@ $active: #ffd32a;
 
 body {
   font-family: 'Manrope', sans-serif;
+  position: relative;
+  &:after {
+    content: '';
+    background-image: url('../assets/img/background.webp');
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.3;
+  }
+}
+
+.q-drawer {
+  background-color: #18122e;
+  .q-list {
+    padding: 24px;
+    a {
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 24px;
+      padding: 16px 24px;
+    }
+  }
 }
 
 h1,
