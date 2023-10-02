@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="text-center">
+    <div class="text-center q-pa-lg">
       <transition appear enter-active-class="animated backInDown slow"
         ><q-img
           src="../assets/img/icon-ryland-academy-white.svg"
@@ -16,7 +16,7 @@
         </p></transition
       >
       <transition appear enter-active-class="animated fadeInUp slower delay-5s">
-        <p class="text-bold text-grey-5">
+        <p class="meta text-bold text-grey-5">
           <small>
             Started by
             <a class="text-grey-5" href="https://twitter.com/realdanryland"
@@ -42,7 +42,10 @@ export default {
 
 <style lang="scss" scoped>
 .q-img {
-  max-width: 200px;
+  max-width: 150px;
   margin-bottom: 40px;
+}
+.meta {
+  line-height: 1.1em;
 }
 </style>
