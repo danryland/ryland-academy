@@ -127,6 +127,12 @@ p {
   padding: 40px 32px;
 }
 
+@media (min-height: 435px) {
+  .footer-quiz {
+    position: initial;
+  }
+}
+
 .q-btn {
   &.btn-large {
     padding: 16px 32px;
