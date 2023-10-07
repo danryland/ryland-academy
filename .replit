@@ -83,3 +83,7 @@ deploymentTarget = "static"
 ignorePorts = false
 publicDir = "dist/spa"
 build = ["sh", "-c", "quasar build"]
+
+[[ports]]
+localPort = 9000
+externalPort = 9000
